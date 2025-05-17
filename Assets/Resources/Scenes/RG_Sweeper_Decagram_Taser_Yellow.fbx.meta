@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 3fac849d40138b54385944d05ebf8f3a
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 4725343813659959700
+    second: Sweeper_Decagram_Taser_Mesh
+  - first:
+      74: -423171545970575208
+    second: Sweeper_Decagram_Taser_Mesh_1
+  - first:
+      74: 372267367859467781
+    second: Sweeper_Decagram_Taser_Move_End_Normal
+  - first:
+      74: -7693222874991844127
+    second: Sweeper_Decagram_Taser_Move_Ing
+  - first:
+      74: -9106471570695185920
+    second: Sweeper_Decagram_Taser_Normal_Attack_all
+  - first:
+      74: -6395678396948078990
+    second: Sweeper_Decagram_Taser_Normal_Attack_Delay
+  - first:
+      74: -8702727803408151907
+    second: Sweeper_Decagram_Taser_Normal_Attack_End
+  - first:
+      74: 2963881443282027540
+    second: Sweeper_Decagram_Taser_Normal_Attack_Ing
+  - first:
+      74: -8251544599866287263
+    second: Sweeper_Decagram_Taser_Normal_Attack_Start
+  - first:
+      74: 3625560833532402797
+    second: Sweeper_Decagram_Taser_Normal_Idle
+  - first:
+      74: 4117398121863382928
+    second: Sweeper_Decagram_Taser_Normal02_Attack_End
+  - first:
+      74: 4973594379390025306
+    second: Sweeper_Decagram_Taser_Normal02_Attack_Ing
+  - first:
+      74: 904743039861867822
+    second: Sweeper_Decagram_Taser_Normal02_Attack_Start
+  - first:
+      74: -4307781439272004121
+    second: Sweeper_Decagram_Taser_RG_Longnote_Ing
+  - first:
+      74: -3736511677996554570
+    second: Sweeper_Decagram_Taser_RG_Move_Ing
+  - first:
+      74: 7898626362665363121
+    second: Sweeper_Decagram_Taser_Vital_Death
+  - first:
+      74: -3210229931599515528
+    second: Sweeper_Decagram_Taser_Vital_Death_Terror
+  - first:
+      74: 3549195456187671495
+    second: Sweeper_Decagram_Taser_Vital_Panic
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

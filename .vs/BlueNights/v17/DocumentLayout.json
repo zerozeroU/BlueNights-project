@@ -1,0 +1,356 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\unitonduty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\unitonduty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|c:\\users\\b2y7w\\documents\\unity\\bluenights-project\\bluenights\\assets\\resources\\prefab\\bulletmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\prefab\\bulletmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|c:\\users\\b2y7w\\documents\\unity\\bluenights-project\\bluenights\\assets\\resources\\script\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\unitcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\unitcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\scene2\\selectedunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\scene2\\selectedunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\costproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\costproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|c:\\users\\b2y7w\\documents\\unity\\bluenights-project\\bluenights\\assets\\resources\\script\\unitcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\unitcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\dropblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\dropblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\blockcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\blockcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\retirecooltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\retirecooltime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\massagecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\massagecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\unitlistscrollview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\unitlistscrollview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\scene2\\portrait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\scene2\\portrait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\scene2\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\scene2\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\shader\\sparklingshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\shader\\sparklingshader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\scene2\\startbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\scene2\\startbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\assets\\resources\\script\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1610D4CA-7033-737F-8D2B-4DF4C296603D}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\script\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 187,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BulletMove.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Prefab\\BulletMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Prefab\\BulletMove.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Prefab\\BulletMove.cs",
+              "RelativeToolTip": "Assets\\Resources\\Prefab\\BulletMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T05:30:33.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BlockCard.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\BlockCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\BlockCard.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\BlockCard.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\BlockCard.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T02:06:19.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitCard.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\UnitCard.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitCard.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\UnitCard.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAIsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T06:03:34.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DropBlock.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\DropBlock.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\DropBlock.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\DropBlock.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\DropBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T08:10:09.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NaviGator.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\NaviGator.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\NaviGator.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\NaviGator.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\NaviGator.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAAL4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T03:53:42.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CostProducer.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\CostProducer.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\CostProducer.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\CostProducer.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\CostProducer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T00:20:43.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SelectedUnit.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\SelectedUnit.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\Scene2\\SelectedUnit.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\SelectedUnit.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\Scene2\\SelectedUnit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:07:26.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitControl.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\UnitControl.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitControl.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\UnitControl.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:07:05.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StartButton.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\StartButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\Scene2\\StartButton.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\StartButton.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\Scene2\\StartButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T04:03:54.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SparklingShader.shader",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Shader\\SparklingShader.shader",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Shader\\SparklingShader.shader",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Shader\\SparklingShader.shader",
+              "RelativeToolTip": "Assets\\Resources\\Shader\\SparklingShader.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-04-24T04:31:14.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Slot.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\Slot.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\Scene2\\Slot.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\Slot.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\Scene2\\Slot.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:28:50.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Ground.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Ground.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\Ground.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Ground.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\Ground.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T07:14:13.916Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 213,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JoyStick.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\JoyStick.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\JoyStick.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\JoyStick.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\JoyStick.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T09:54:01.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitOnDuty.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitOnDuty.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\UnitOnDuty.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitOnDuty.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\UnitOnDuty.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAawCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T07:35:23.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MassageCounter.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\MassageCounter.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\MassageCounter.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\MassageCounter.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\MassageCounter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:05:45.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RetireCoolTime.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\RetireCoolTime.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\RetireCoolTime.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\RetireCoolTime.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\RetireCoolTime.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:40:46.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\GameManager.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAzwD0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T10:37:33.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Portrait.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\Portrait.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\Scene2\\Portrait.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\Scene2\\Portrait.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\Scene2\\Portrait.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:31:33.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UnitListScrollView.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitListScrollView.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\UnitListScrollView.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UnitListScrollView.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\UnitListScrollView.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T03:38:31.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Script\\UIManager.cs",
+              "ToolTip": "C:\\Users\\b2y7w\\Documents\\Unity\\BlueNights-project\\BlueNights\\Assets\\Resources\\Script\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Script\\UIManager.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAC0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:30:11.656Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
