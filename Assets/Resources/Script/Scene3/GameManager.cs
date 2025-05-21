@@ -27,38 +27,48 @@ public class GameManager : MonoBehaviour
     public int Cost;
 
 
-    private GameObject _canvas;
+    public GameObject canvas;
     private int mapLength_X, mapLength_Z;
-    private Node[,] _searchMap;
-    private GameObject[] _blockArr;
-    private GameObject[] _roadArr;
-    private Dictionary<string,GameObject> _unitDict;
-    private GameObject _joyStick;
-    private List<GameObject> _groundList;
-    private List<GameObject> _destroyGroundList;
+    private Node[,] searchMap;
+    private GameObject[] blockArr;
+    private GameObject[] roadArr;
+    private Dictionary<string,GameObject> unitDict;
+    private GameObject joyStick;
+    private List<GameObject> groundList;
+    private List<GameObject> destroyGroundList;
+
+    [SerializeField]
+    private GameObject enemy;
+    private int enemyCount;
+    private int enemyMaxValue;
 
     private void Awake()
     {
         LoadUI();
-        _unitDict = new Dictionary<string, GameObject>();
-        _groundList = new List<GameObject>();
-        _destroyGroundList = new List<GameObject>();
+        unitDict = new Dictionary<string, GameObject>();
+        groundList = new List<GameObject>();
+        destroyGroundList = new List<GameObject>();
         SetEndCubePos();
-        SetMap();
+        FindRoad();
+        FindBlock();
+        SetGroundList();
+        enemy = Resources.Load<GameObject>("Prefab/Enemy");
+        enemyMaxValue = 20;
     }
     private void Start()
     {
         LoadSetUnitPrefab();
+        StartCoroutine(CreateEnemy());
     }
     void Update()
     {
         if(ResearchRoad)
         {
-            Debug.Log("OnDestoryBlock : " + OnDestoryBlock);
+            //Debug.Log("OnDestoryBlock : " + OnDestoryBlock);
 
             if (OnDestoryBlock == null)
             {
-                Debug.Log("OnDestoryBlock : " + OnDestoryBlock);
+             //   Debug.Log("OnDestoryBlock : " + OnDestoryBlock);
                 AllUnitResearchRoad();
 
                 
@@ -67,7 +77,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
- 
+    private IEnumerator CreateEnemy()
+    {
+        while (enemyCount != enemyMaxValue)
+        {
+
+            yield return new WaitForSeconds(2.5f);
+            Debug.Log("Create Enemy");
+            Instantiate(enemy, new Vector3(1, 0, 1), Quaternion.identity);
+            enemyCount++;
+
+        }
+
+    }
+
+
 
 
 
@@ -110,11 +134,10 @@ public class GameManager : MonoBehaviour
     {
        
 
-        SetMap();
         NaviGator[] naviGatorArr = FindObjectsOfType<NaviGator>();
 
-        Debug.Log("UnitReSeachRoad   " + naviGatorArr.Length);
-        Debug.Log(naviGatorArr[0].gameObject.name);
+       // Debug.Log("UnitReSeachRoad   " + naviGatorArr.Length);
+       // Debug.Log(naviGatorArr[0].gameObject.name);
         foreach (NaviGator arr in naviGatorArr)
         {
             arr.ResearchRoad();
@@ -123,7 +146,7 @@ public class GameManager : MonoBehaviour
     
     public void ResetGroundDir(UnitOnDuty unit)
     {
-        foreach (GameObject list in _groundList)
+        foreach (GameObject list in groundList)
         {
             list.GetComponent<Ground>().IsDirection = false;
         }
@@ -151,18 +174,18 @@ public class GameManager : MonoBehaviour
                     case Direction.Defaut:
                         break;
                     case Direction.Top:
-                        for (int k = 0; k < _groundList.Count; k++)
+                        for (int k = 0; k < groundList.Count; k++)
                         {
-                            if (_groundList[k] == null) { continue; }
-                            if (x - attackArea.GetLength(0) / 2 + i == _groundList[k].transform.position.x
-                                && z + j == _groundList[k].transform.position.z)
+                            if (groundList[k] == null) { continue; }
+                            if (x - attackArea.GetLength(0) / 2 + i == groundList[k].transform.position.x
+                                && z + j == groundList[k].transform.position.z)
                             {
                                 if (attackArea[i, j] == true)
                                 {
-                                  _groundList[k].GetComponent<Ground>().IsDirection = true;
+                                  groundList[k].GetComponent<Ground>().IsDirection = true;
                                     if (unit.GetComponent<UnitOnDuty>().SelectedAttField == false)
                                     {
-                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(_groundList[k]);
+                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(groundList[k]);
                                     }
                                 }
                                
@@ -170,18 +193,18 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case Direction.Bottom:
-                        for (int k = 0; k < _groundList.Count; k++)
+                        for (int k = 0; k < groundList.Count; k++)
                         {
-                            if (_groundList[k] == null) { continue; }
-                            if (x - attackArea.GetLength(0) / 2 + i == _groundList[k].transform.position.x
-                                && z - j == _groundList[k].transform.position.z)
+                            if (groundList[k] == null) { continue; }
+                            if (x - attackArea.GetLength(0) / 2 + i == groundList[k].transform.position.x
+                                && z - j == groundList[k].transform.position.z)
                             {
                                 if (attackArea[i, j] == true)
                                 {
-                                    _groundList[k].GetComponent<Ground>().IsDirection = true;
+                                    groundList[k].GetComponent<Ground>().IsDirection = true;
                                     if (unit.GetComponent<UnitOnDuty>().SelectedAttField == false)
                                     {
-                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(_groundList[k]);
+                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(groundList[k]);
                                     }
                                 }
 
@@ -189,18 +212,18 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case Direction.Right:
-                        for (int k = 0; k < _groundList.Count; k++)
+                        for (int k = 0; k < groundList.Count; k++)
                         {
-                            if (_groundList[k] == null) { continue; }
-                            if (z - attackArea.GetLength(0) / 2 + i == _groundList[k].transform.position.z
-                                && x + j == _groundList[k].transform.position.x)
+                            if (groundList[k] == null) { continue; }
+                            if (z - attackArea.GetLength(0) / 2 + i == groundList[k].transform.position.z
+                                && x + j == groundList[k].transform.position.x)
                             {
                                 if (attackArea[i, j] == true)
                                 {
-                                    _groundList[k].GetComponent<Ground>().IsDirection = true;
+                                    groundList[k].GetComponent<Ground>().IsDirection = true;
                                     if (unit.GetComponent<UnitOnDuty>().SelectedAttField == false)
                                     {
-                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(_groundList[k]);
+                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(groundList[k]);
                                     }
                                 }
 
@@ -208,18 +231,18 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case Direction.Left:
-                        for (int k = 0; k < _groundList.Count; k++)
+                        for (int k = 0; k < groundList.Count; k++)
                         {
-                            if (_groundList[k] == null) { continue; }
-                            if (z - attackArea.GetLength(0) / 2 + i == _groundList[k].transform.position.z
-                                && x - j == _groundList[k].transform.position.x)
+                            if (groundList[k] == null) { continue; }
+                            if (z - attackArea.GetLength(0) / 2 + i == groundList[k].transform.position.z
+                                && x - j == groundList[k].transform.position.x)
                             {
                                 if (attackArea[i, j] == true)
                                 {
-                                    _groundList[k].GetComponent<Ground>().IsDirection = true;
+                                    groundList[k].GetComponent<Ground>().IsDirection = true;
                                     if (unit.GetComponent<UnitOnDuty>().SelectedAttField == false)
                                     {
-                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(_groundList[k]);
+                                        unit.GetComponent<UnitOnDuty>().AttackFieldList.Add(groundList[k]);
                                     }
                                 }
 
@@ -232,7 +255,7 @@ public class GameManager : MonoBehaviour
     }
     public GameObject InsJoyStick(Ground ground)
     {
-        GameObject JoyStick = Instantiate(_joyStick, _canvas.transform);
+        GameObject JoyStick = Instantiate(joyStick, canvas.transform);
         JoyStick.transform.position
             = Camera.main.WorldToScreenPoint(ground.StandingUnit.transform.position);
         JoyStick.GetComponent<JoyStick>().Ground = ground;
@@ -242,17 +265,17 @@ public class GameManager : MonoBehaviour
     }
     private void LoadUI()
     {
-        _joyStick = Resources.Load<GameObject>("Prefab/JoyStick");
-        _canvas = GameObject.Find("Canvas");
+        joyStick = Resources.Load<GameObject>("Prefab/JoyStick");
+        canvas = GameObject.Find("Canvas");
 
-        if(_joyStick==null|| _canvas==null)
+        if(joyStick==null|| canvas==null)
         {
             Debug.Log("UI Object is null");
         }
     }
     public void UnitOnGround(UnitCard card, Ground ground, Vector3 vec3)
     {
-        ground.StandingUnit = Instantiate(_unitDict[card.unitData.EnName]);
+        ground.StandingUnit = Instantiate(unitDict[card.unitData.EnName]);
         ground.StandingUnit.transform.position = vec3;
         ground.StandingUnit.GetComponent<UnitControl>().ground= ground;
         ground.StandingUnit.GetComponent<UnitControl>().Card= card.gameObject;
@@ -326,7 +349,7 @@ public class GameManager : MonoBehaviour
         foreach (UnitData data in unitdata)
         {
             GameObject loadUnit = Resources.Load<GameObject>("Prefab/Unit/"+data.EnName);
-            _unitDict.Add(data.EnName,loadUnit);
+            unitDict.Add(data.EnName,loadUnit);
         }
     }
     private void SetEndCubePos()
@@ -337,32 +360,32 @@ public class GameManager : MonoBehaviour
     
     public Node[,] GetMap()
     {
-        return _searchMap;
+        return searchMap;
     }
     private void SetGroundList()
     {
         OverlapGroundDelete();
 
-        if (_blockArr == null || _roadArr == null)
+        if (blockArr == null || roadArr == null)
         { Debug.Log("SetGroundList arr is null"); return; }
 
-        foreach (GameObject arr in _blockArr)
+        foreach (GameObject arr in blockArr)
         {
-            if (arr.GetComponent<Ground>()){ _groundList.Add(arr); }
+            if (arr.GetComponent<Ground>()){ groundList.Add(arr); }
         }
 
-        foreach (GameObject arr in _roadArr)
+        foreach (GameObject arr in roadArr)
         {
             if (arr.GetComponent<Ground>())
             {
-                { _groundList.Add(arr); }
+                { groundList.Add(arr); }
             }
 
-            foreach (GameObject list in _destroyGroundList)
+            foreach (GameObject list in destroyGroundList)
             {
                 if(arr== list)
                 {
-                    _groundList.Remove(arr);
+                    groundList.Remove(arr);
                 }
             }
         }
@@ -370,16 +393,16 @@ public class GameManager : MonoBehaviour
     }
     private void OverlapGroundDelete()
     {
-        foreach (GameObject block in _blockArr)
+        foreach (GameObject block in blockArr)
         {
-            foreach (GameObject road in _roadArr)
+            foreach (GameObject road in roadArr)
             {
                 if ((int)block.transform.position.x == (int)road.transform.position.x
                     && (int) block.transform.position.z == (int)road.transform.position.z ) 
                 {
                     if (block.GetComponent<Ground>() == true)
                     {
-                        _destroyGroundList.Add(road);
+                        destroyGroundList.Add(road);
                         Destroy(road);
                     }
                     else continue;
@@ -387,80 +410,32 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    private void SetMap()
-    {
-        FindRoad();
-        FindBlock();
-        SetGroundList();
-        SetMapSize();
-
-
-
-
-        _searchMap = new Node[mapLength_X, mapLength_Z];
-
-        foreach (GameObject block in _blockArr)
-        {
-            int x = (int)block.transform.position.x;
-            int z = (int)block.transform.position.z;
-            _searchMap[x, z] = new Node(x, z, true);
-        }
-
-        for (int x = 0; x < mapLength_X; x++)
-        {
-            for (int z = 0; z < mapLength_Z; z++)
-            {
-                if (_searchMap[x, z] == null)
-                {
-                    _searchMap[x, z] = new Node(x, z, false);
-                }
-            }
-        }
-    }
-    private void SetMapSize()
-    {
-        foreach (GameObject block in _blockArr)
-        {
-            if (block.transform.position.x > mapLength_X)
-            { mapLength_X = (int)block.transform.position.x; }
-            if(block.transform.position.z > mapLength_Z)
-            { mapLength_Z = (int)block.transform.position.z; }
-        }
-
-        mapLength_X += 1;
-        mapLength_Z += 1;
-        Debug.Log("MapX : " + mapLength_X + ", MapZ : " + mapLength_Z);
-    }
+   
    
     private void FindBlock() 
     {
-        if (_blockArr != null) { _blockArr = null; }
+        if (blockArr != null) { blockArr = null; }
 
-        _blockArr = GameObject.FindGameObjectsWithTag("Block");
+        blockArr = GameObject.FindGameObjectsWithTag("Block");
         
-        foreach (GameObject block in _blockArr)
+        foreach (GameObject block in blockArr)
         {
             block.transform.position = SetPosition(block.transform.position);
         }
     }
     private void FindRoad()
     {
-        if (_roadArr != null) { _roadArr = null; }
+        if (roadArr != null) { roadArr = null; }
 
-        _roadArr = GameObject.FindGameObjectsWithTag("Road");
+        roadArr = GameObject.FindGameObjectsWithTag("Road");
 
-        foreach (GameObject road in _roadArr)
+        foreach (GameObject road in roadArr)
         {
             road.transform.position = SetPosition(road.transform.position);
         }
     }
-
-    public GameObject[] GetArrBlocks()
-    {
-        FindBlock();
-        return _blockArr;
-    }
-    public Vector3 SetPosition(Vector3 position)
+    
+    private Vector3 SetPosition(Vector3 position)
     {
         float posX = position.x;
         float posZ = position.z;

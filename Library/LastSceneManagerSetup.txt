@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Resources/Scenes/SelectScene.unity
+- path: Assets/Resources/Scenes/BattleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

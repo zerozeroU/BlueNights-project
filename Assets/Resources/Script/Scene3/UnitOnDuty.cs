@@ -137,9 +137,6 @@ public class UnitOnDuty : UnitControl
 
     private void OnDestroy()
     {
-        if (Ground.IsSortie)
-        {
-           
-        }
+      
     }
 }

@@ -89,6 +89,7 @@ public class JsonManager : MonoBehaviour
         Debug.Log("Export to SlotUnitData Complete");
     }
 }
+
 public class UnitData
 {
     public string Name;

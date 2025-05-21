@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node
 {
@@ -16,10 +17,9 @@ public class Node
         get{ return new Vector3(posX, 0, posZ);}
     }
     public bool IsBlock { get; set; }
-    public Node ParentNode { get; set; }
-
     private float posX, posZ;
 
+    public Node ParentNode { get; set; }
     public void SetNodeClosing(Node _parentNode)
     {
         ParentNode = _parentNode;
@@ -29,6 +29,12 @@ public class Node
 
 public class NaviGator : MonoBehaviour
 {
+    public float Speed;
+
+    private int mapLength_X, mapLength_Z;
+    private Node[,] searchMap;
+    private GameObject[] blockArr;
+    private GameObject[] roadArr;
 
     private GameObject startCube;
     private GameObject endCube;
@@ -39,7 +45,10 @@ public class NaviGator : MonoBehaviour
     private List<GameObject> BlockList;
     private Node cursor;
     private Node finalNode;
-    private Node[,] map;
+    private bool Research;
+    private int nodeCount;
+    private Vector3 nextMovePos;
+    private Vector3 AfterPos;
 
     [SerializeField]
     GameObject cube;
@@ -49,15 +58,18 @@ public class NaviGator : MonoBehaviour
     private void Awake()
     {
         if (gameObject.name == "Start")
-        { transform.position = GameManager.Instance.SetPosition(transform.position); }
+        { transform.position = SetPosition(transform.position); }
 
         startCube = GameObject.Find("Start");
         endCube = GameObject.Find("End");
         openList = new List<Node>();
         closeList = new List<Node>();
         finalList = new List<Node>();
-
+        
         cubeList= new List<GameObject>();
+        nextMovePos = transform.position;
+        AfterPos=transform.position;    
+
     }
     void Start()
     {
@@ -66,11 +78,87 @@ public class NaviGator : MonoBehaviour
    
     void Update()
     {
-        if(finalList.Count == 0)
+        if(finalList.Count == 0|| Research==true)
         {
+            Research = false;
             ResearchRoad();
         }
+
+        StartCoroutine(Dir());
+        Move();
+
     }
+    public void ResearchRoad()
+    {
+        Initialize();
+        SearchRoad();
+        Debug.Log("Research");
+    }
+    private void SearchRoad()
+    {
+        SetMap();
+        SetBlockList();
+        SetStartNode();
+        SetFinalNode();
+        SearchDir();
+      //  CubeCreator();
+    }
+    private void Initialize()
+    {
+        openList.Clear();
+        closeList.Clear();
+        finalList.Clear();
+        BlockList.Clear();
+        nodeCount = 0;
+    }
+   
+    public IEnumerator Dir()
+    {
+        while (true)
+        {
+            Vector3 currentPos = transform.position;
+            Vector3 moveDirection = currentPos - AfterPos;
+            if (moveDirection.magnitude > 0.01f)
+            {
+                float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, targetAngle - 180, 0), Time.deltaTime * 10f);
+            }
+            AfterPos = currentPos;
+            yield return null;
+        }
+    }
+    private void Move()
+    {
+
+        if (finalList == null || finalList.Count == 0) return;
+
+        if (transform.position.x==endCube.transform.position.x
+            && transform.position.z == endCube.transform.position.z)
+        {
+            Destroy(gameObject);
+        }
+
+        if (Vector3.Distance(transform.position, nextMovePos) < 0.01f)
+        {
+            if (finalList.Count - 1 > nodeCount)
+            {
+                nodeCount++;
+            }
+        }
+        if (gameObject.tag == "Enemy")
+        {
+            if (nodeCount < finalList.Count)
+            {
+                 nextMovePos = finalList[nodeCount].Pos;
+                 transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    nextMovePos,
+                    Speed * Time.deltaTime
+                );
+            }
+        }
+        }
     private void CubeCreator()
     {
         if (cube != null)
@@ -85,7 +173,7 @@ public class NaviGator : MonoBehaviour
             }
             if (finalList.Count == 0)
             {
-                Debug.Log("finalList.Count == 0");
+               // Debug.Log("finalList.Count == 0");
                 return;
             }
 
@@ -97,28 +185,7 @@ public class NaviGator : MonoBehaviour
             }
         }
     }
-    public void ResearchRoad()
-    {
-        Initialize();
-        SearchRoad();
-        Debug.Log("ResearchRoad");
-    }
-    private void SearchRoad()
-    {
-        SetBlockList();
-        SetMap();
-        SetStartNode();
-        SetFinalNode();
-        SearchDir();
-       // CubeCreator();
-    }
-    private void Initialize()
-    {
-        openList.Clear();
-        closeList.Clear();
-        finalList.Clear();
-        BlockList.Clear();
-    }
+   
     private void FinalNodeCheck()
     {
         while (cursor.ParentNode != null)
@@ -134,6 +201,13 @@ public class NaviGator : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {
+            if (finalList.Count - 2 < 0 || finalList.Count - 1 < 0)
+            {
+                finalList.Clear();
+                finalList.Add(new Node(endCube.transform.position.x, endCube.transform.position.z, false));
+                return;
+            }
+
             Vector3 dirPos = finalList[finalList.Count - 2].Pos - finalList[finalList.Count - 1].Pos;
 
             Direction dir = Direction.Defaut;
@@ -175,8 +249,7 @@ public class NaviGator : MonoBehaviour
             }
             Debug.Log("x : " + dirPos.x + ", z : " + dirPos.z);
 
-            Node myPosNode = new Node(transform.position.x, transform.position.z, true);
-            finalList.Add(myPosNode);
+            finalList.Add(new Node(transform.position.x, transform.position.z, true));
         }
     }
     private void CloseNodeCheck()
@@ -203,11 +276,11 @@ public class NaviGator : MonoBehaviour
         int count = 0;
         while (!hasFinalNode)
         {
-            if (count > map.GetLength(0) * map.GetLength(1)) 
+            if (count > (searchMap.GetLength(0) * searchMap.GetLength(1)- blockArr.Length)) 
             {
                 Debug.Log("SearchDir Count : "+count);
                 GameManager.Instance.LastBlockDestroy();
-                GameManager.Instance.ResearchRoad = true;
+                Research = true;
                 break; 
             }
 
@@ -217,7 +290,7 @@ public class NaviGator : MonoBehaviour
 
                 if (cursor.Pos == finalNode.Pos)
                 {
-                    Debug.Log("cursor.Pos == finalNode.Pos");
+                    //Debug.Log("cursor.Pos == finalNode.Pos");
                     FinalNodeCheck();
                     hasFinalNode = true;
                 }
@@ -226,22 +299,25 @@ public class NaviGator : MonoBehaviour
                     int x = (int)cursor.Pos.x;
                     int z = (int)cursor.Pos.z;
 
-                    if (x + 1 == map[x + 1, z].Pos.x && z == map[x + 1, z].Pos.z)
+                    //©Л
+                    if (x + 1 == searchMap[x + 1, z].Pos.x && z == searchMap[x + 1, z].Pos.z)
                     {
-                        OpenNodeCheck(map[x + 1, z]);
+                        OpenNodeCheck(searchMap[x + 1, z]);
                     }
-                    if (x - 1 == map[x - 1, z].Pos.x && z == map[x - 1, z].Pos.z)
+                    //аб
+                    if (x - 1 == searchMap[x - 1, z].Pos.x && z == searchMap[x - 1, z].Pos.z)
                     {
-                        OpenNodeCheck(map[x - 1, z]);
+                        OpenNodeCheck(searchMap[x - 1, z]);
                     }
-                    if (x == map[x, z + 1].Pos.x && z + 1 == map[x, z + 1].Pos.z)
+                    //╩С
+                    if (x == searchMap[x, z + 1].Pos.x && z + 1 == searchMap[x, z + 1].Pos.z)
                     {
-                        OpenNodeCheck(map[x, z + 1]);
+                        OpenNodeCheck(searchMap[x, z + 1]);
                     }
-
-                    if (x == map[x, z - 1].Pos.x && z - 1 == map[x, z - 1].Pos.z)
+                    //го
+                    if (x == searchMap[x, z - 1].Pos.x && z - 1 == searchMap[x, z - 1].Pos.z)
                     {
-                        OpenNodeCheck(map[x, z - 1]);
+                        OpenNodeCheck(searchMap[x, z - 1]);
                     }
 
                 }
@@ -249,18 +325,12 @@ public class NaviGator : MonoBehaviour
             CloseNodeCheck();
             count++;
         }
-        if(aroundBlock)
-        {
-        }
+     
     }
-    private void SetMap()
-    {
-        map = GameManager.Instance.GetMap();
-        if (map == null) { Debug.Log("map is Null"); }
-    }
+  
     private void SetBlockList()
     {
-        BlockList = GameManager.Instance.GetArrBlocks().ToList();
+        BlockList = blockArr.ToList();
         if (BlockList == null) { Debug.Log("BlockList is Null"); }
     }
     private void SetFinalNode()
@@ -272,11 +342,86 @@ public class NaviGator : MonoBehaviour
     }
     private void SetStartNode()
     {
-        Vector3 startPos = GameManager.Instance.SetPosition(transform.position);
+        Vector3 startPos = SetPosition(transform.position);
         Node startNode = new Node((int)startPos.x, (int)startPos.z, true);
        // Debug.Log("startNode : " + startNode.Pos.x + ", " + startNode.Pos.z);
-        cursor = startNode;
         closeList.Add(startNode);
     }
-  
+    private void SetMap()
+    {
+        FindRoad();
+        FindBlock();
+        SetMapSize();
+
+        searchMap = new Node[mapLength_X, mapLength_Z];
+
+        foreach (GameObject block in blockArr)
+        {
+            int x = (int)block.transform.position.x;
+            int z = (int)block.transform.position.z;
+            searchMap[x, z] = new Node(x, z, true);
+        }
+
+        for (int x = 0; x < mapLength_X; x++)
+        {
+            for (int z = 0; z < mapLength_Z; z++)
+            {
+                if (searchMap[x, z] == null)
+                {
+                    searchMap[x, z] = new Node(x, z, false);
+                }
+            }
+        }
+    }
+    private void SetMapSize()
+    {
+        foreach (GameObject block in blockArr)
+        {
+            if (block.transform.position.x > mapLength_X)
+            { mapLength_X = (int)block.transform.position.x; }
+            if (block.transform.position.z > mapLength_Z)
+            { mapLength_Z = (int)block.transform.position.z; }
+        }
+
+        mapLength_X += 1;
+        mapLength_Z += 1;
+        // Debug.Log("MapX : " + mapLength_X + ", MapZ : " + mapLength_Z);
+    }
+
+    private void FindBlock()
+    {
+        if (blockArr != null) { blockArr = null; }
+
+        blockArr = GameObject.FindGameObjectsWithTag("Block");
+
+        foreach (GameObject block in blockArr)
+        {
+            block.transform.position = SetPosition(block.transform.position);
+        }
+    }
+
+    private void FindRoad()
+    {
+        if (roadArr != null) { roadArr = null; }
+
+        roadArr = GameObject.FindGameObjectsWithTag("Road");
+
+        foreach (GameObject road in roadArr)
+        {
+            road.transform.position = SetPosition(road.transform.position);
+        }
+    }
+   
+    private Vector3 SetPosition(Vector3 position)
+    {
+        float posX = position.x;
+        float posZ = position.z;
+        int i_PosX = (int)position.x;
+        int i_PosZ = (int)position.z;
+        if (posX - i_PosX > 0.500f) { i_PosX += 1; }
+        if (posZ - i_PosZ > 0.500f) { i_PosZ += 1; }
+
+        return new Vector3(i_PosX, position.y, i_PosZ);
+    }
+
 }

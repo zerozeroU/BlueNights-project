@@ -58,6 +58,7 @@
     <Compile Include="Assets\Resources\Script\Scene3\Ground.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\NaviGator.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\UnitControl.cs" />
+    <Compile Include="Assets\Resources\Script\Scene3\BulletMove.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\BlockCard.cs" />
     <Compile Include="Assets\Resources\Script\Scene2\SelectedUnit.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\JoyStick.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Assets\Resources\Script\Scene3\JsonManager.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\DropBlock.cs" />
     <Compile Include="Assets\Resources\Script\Scene3\MassageCounter.cs" />
-    <Compile Include="Assets\Resources\Script\Scene3\BulletMove.cs" />
+    <Compile Include="Assets\Resources\Script\Scene3\HpBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Shader\ToonShaderWithMaskOnly.shader" />
